@@ -10,9 +10,9 @@ int main(void)
 {
 	int num = 0;
 
-	while (num < 15)
+	while (num <= 15)
 	{
-		printf("%x, num);
+		printf("%x", num);
 		num++;
 	}
 	putchar('\n');
