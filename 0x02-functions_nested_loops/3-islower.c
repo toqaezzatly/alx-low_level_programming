@@ -3,7 +3,7 @@
 /**
  * _islower - lower-cased
  *
- * C: is an integer ascii value
+ * @c: is an integer ascii value
  *
  * Return:  1 ->  lower
 */
