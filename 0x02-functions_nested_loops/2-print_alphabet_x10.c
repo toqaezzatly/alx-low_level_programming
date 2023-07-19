@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "main.h"
-/**
+
+/*
  * printing alphabetX10 _putchar
- *
- * Return: 0 (success)
+*
 */
+
 void  print_alphabet_x10(void)
 {
 	int i;
