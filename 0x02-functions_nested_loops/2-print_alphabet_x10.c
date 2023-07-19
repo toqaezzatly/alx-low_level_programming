@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - Entry point
- *
- * Description: printing alphabet _putchar
+ * printing alphabetX10 _putchar
  *
  * Return: 0 (success)
 */
-void  print_alphabet(void)
+void  print_alphabet_x10(void)
 {
 	int i;
 	int j;
