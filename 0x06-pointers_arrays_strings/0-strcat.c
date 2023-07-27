@@ -1,24 +1,27 @@
 #include "main.h"
+
 /**
- * _strcat - fn to overwrite '\0' of dest
- * with 1st char of src
- * Description: takes names of the arrays of strings aka
- * pointers to the 1st elements of strings
- *
- *
- * @dest: pointer
- *
- * @src: ..
- *
- * Return: pointer to dest string
- *
-*/
+ * _strcat - concatenate two strings
+ * @dest: destination
+ * @src: source
+ * Return: concatenated string
+ */
+
 char *_strcat(char *dest, char *src)
 {
-	int len;
+	int i = 0;
+	int j = 0;
 
-	len = strlen(dest);
-	while (*srs != '\0')
-		dest[++j] = *src++;
-	dest[j] = '\0';
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+
+	return (dest);
 }
