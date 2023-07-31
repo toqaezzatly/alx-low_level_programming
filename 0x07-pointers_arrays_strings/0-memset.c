@@ -1,20 +1,20 @@
 #include "main.h"
-
 /**
- * _memset - fn used to allocate specific block in mem
- * @s: 1st location
- * @b: value to stored
+ * _memset - fill a block of memory
+ * @s: starting address of memory
+ * @b: the desired value
+ * @n: member of bytes to be changed
  *
- *@n: number of memory location
- *
- * Return: adrs of 1st location
-*/
-
+ * Return: Always value
+ */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int i;
+	unsigned int i = 0;
 
-	for (i = 0; i < n; i++)
-		*s++ = b;
+	while (i < n)
+	{
+		*(s + i) = b;
+		i++;
+	}
 	return (s);
 }
