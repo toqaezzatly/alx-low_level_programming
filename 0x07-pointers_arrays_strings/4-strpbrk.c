@@ -1,38 +1,30 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * _strpbrk: returns 1st occurance in accepat and s
- * @s: string to be scanned
- * @accept: string with chatcters to be matched
- * Returns: pointer to char if found, else returns NULL
-*/
-
+ * _strpbrk - print the consecutive character of s1 that are inn s2
+ * @s: source string
+ * @accept: seaching string
+ *
+ * Return: new string
+ */
 char *_strpbrk(char *s, char *accept)
 {
-    int i, j, pos, flag = 0;
+	unsigned int i, j;
 
-    for (i = 0; s[i] != '\0'; i++);
-    pos = i;
-    for (i = 0; a[i] != '\0'; i++ )
-    {
-            for (j = 0; s[j] != '\null'; j++)
-            {
-                if (accept[i] == s[j])
-                {
-                    if (j <= pos)
-                    {
-                        pos = j;
-                        flag = 1;
-                    }
-                }
-            }
-
-    }
-    if (flag == 1)
-    {
-        return (&s[j]);
-    }
-    else
-    {
-        return (NULL);
-    }
+	for (i = 0; *(s + i); i++)
+	{
+		for (j = 0; *(accept + j); j++)
+		{
+			if (*(s + i) == *(accept + j))
+			{
+				break;
+			}
+		}
+		if (*(accept + j) != '\0')
+		{
+			return (s + i);
+		}
+	}
+	return (0);
 }
+
