@@ -1,18 +1,18 @@
 #include "main.h"
 /**
- * _strchr  - searches for first occurance for a charcter
- * @s: pointer to first to location
- * @c: required charcter
- *
- * Return: first occurance
-*/
-
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (success)
+ */
 char *_strchr(char *s, char c)
 {
-	while (*s != c)
+	int i = 0;
+
+	for (; s[i] >= '\0'; i++)
 	{
-		if (s[i] != c)
-			i++;
+		if (s[i] == c)
+			return (&s[i]);
 	}
-	return (&s[i]);
+	return (0);
 }
