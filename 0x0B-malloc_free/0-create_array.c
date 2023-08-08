@@ -11,5 +11,5 @@ if (size == 0 || pchar == 0)
 return (NULL);
 while (size--)
 pchar[size] = c;
-return (c);
+return (pchar);
 }
