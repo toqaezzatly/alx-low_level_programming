@@ -7,7 +7,8 @@
  * Return: Pointer to the result
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
-{char *res;
+{
+char *res;
 unsigned int len1, len2, len3;
 
 if (s1 == NULL)
