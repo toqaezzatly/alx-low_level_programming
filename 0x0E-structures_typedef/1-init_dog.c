@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include "dog.h"
 /**
  * Initializes a dog struct with the given name, age, and owner.
  *
