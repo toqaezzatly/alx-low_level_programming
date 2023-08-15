@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include "dog.h"
+
 /**
  * _strlen - returns the length of a string
  * @s: string to evaluate
@@ -32,6 +35,7 @@ char *_strcpy(char *dest, char *src)
 	int len, i;
 
 	len = 0;
+
 	while (src[len] != '\0')
 	{
 		len++;
@@ -45,6 +49,7 @@ char *_strcpy(char *dest, char *src)
 
 	return (dest);
 }
+
 /**
  * new_dog - creates a new dog
  * @name: name of the dog
@@ -71,7 +76,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog);
 		return (NULL);
 	}
-dog->owner = malloc(sizeof(char) * (len2 + 1));
+	dog->owner = malloc(sizeof(char) * (len2 + 1));
 	if (dog->owner == NULL)
 	{
 		free(dog);
@@ -84,4 +89,5 @@ dog->owner = malloc(sizeof(char) * (len2 + 1));
 
 	return (dog);
 }
+
 
