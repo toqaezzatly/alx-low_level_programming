@@ -10,7 +10,12 @@ void print_all(const char * const format, ...)
 {
 	int i = 0;
 	char *str, *sep = "";
-f (format)
+
+	va_list list;
+
+	va_start(list, format);
+
+	if (format)
 	{
 		while (format[i])
 		{
@@ -44,4 +49,3 @@ f (format)
 	va_end(list);
 }
 
-}
