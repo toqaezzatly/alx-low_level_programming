@@ -2,6 +2,8 @@
 /**
  * factorial -  calcutes the factoria of the number
  * @n: given number
+ *
+ * Return: factorial 
 */
 int factorial(int n)
 {
