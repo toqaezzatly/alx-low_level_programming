@@ -10,7 +10,7 @@ int check_prime(int n, int divisor)
 {
 if (divisor >= n && n > 1)
 return (1);
-if (n % divisor == 0 || n < 1)
+if (n % divisor == 0 || n <= 1)
 return (0);
 return (check_prime(n, divisor + 1));
 }
