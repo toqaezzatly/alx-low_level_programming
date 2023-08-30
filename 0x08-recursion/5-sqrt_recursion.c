@@ -1,17 +1,17 @@
 #include "main.h"
 /**
- * sqrt - helper function
+ * _sqrt - helper function
  * @n: number to be square rooted
  * @val: check ^ 2
  *
  * Return: val
 */
-int sqrt(int n, int val)
+int _sqrt(int n, int val)
 {
         if (val * val == n)
                 return (val);
         if (val * val < n)
-                return (sqrt(n, val + 1));
+                return (_sqrt(n, val + 1));
         else
                 return (-1);
 }
@@ -23,5 +23,5 @@ int sqrt(int n, int val)
 */
 int _sqrt_recursion(int n)
 {
-        return (sqrt(n, 1));
+        return (_sqrt(n, 1));
 }
