@@ -1,5 +1,3 @@
-#ifdef MAIN_H
-#define MAIN_H
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -28,4 +26,3 @@ int factorial(int n);
 int _strlen_recursion(char *s);
 void _print_rev_recursion(char *s);
 void _puts_recursion(char *s);
-#endif /*MAIN_H*/
