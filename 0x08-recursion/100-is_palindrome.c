@@ -12,7 +12,7 @@ int pal_helper(char *s, int start, int end)
 	if (start == end)
 		return (1);
 	if (s[start] == s[end])
-		return (pal_helper(*s, start + 1, end - 1));
+		return (pal_helper(s, start + 1, end - 1));
 	else
 		return (0);
 }
