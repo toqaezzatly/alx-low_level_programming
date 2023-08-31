@@ -24,5 +24,5 @@ int pal_helper(char *s, int start, int end)
 */
 int is_palindrome(char *s)
 {
-	return (pal_helper(s, 0, _strlen(s) - 1));
+	return (pal_helper(s, 0, strlen(s) - 1));
 }
