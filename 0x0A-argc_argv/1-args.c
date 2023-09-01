@@ -1,13 +1,16 @@
+#include <stdio.h>
 #include "main.h"
 /**
- * main - Entry point
- * @argc: size of array of argv
- * @argv: array of arument passed to main fn
- * Return: 0-> always
-*/
+ * main - prints the number of arguments.
+ * @argc: argument count
+ * @argv: Argument vector for values
+ * Return: Always 0
+ */
+
 int main(int argc, char *argv[])
 {
 	(void)argv;
-	printf("%d\n", argc - 1);
+	argc--;
+	printf("%d\n", argc);
 	return (0);
 }
