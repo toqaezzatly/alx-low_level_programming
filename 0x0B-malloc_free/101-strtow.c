@@ -1,42 +1,98 @@
-#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 /**
-  *argstostr - concatenates all arguments of the program.
-  *@ac: argument count.
-  *@av: pointer to array of size ac.
-  *Return: NULL if ac == 0 or av == null, Pointer to new string.
-  *NULL on fail.
-  */
-char *argstostr(int ac, char **av)
+ * strncat_mod - concatenates string with n bytes from another string
+ * @dest: destination string
+ * @src: source string
+ * @i: index of beginning char from source string to copy
+ * @str_len: string length
+ * Return: next index to check of source string
+ */
+int strncat_mod(char *dest, char *src, int i, int str_len)
 {
-	int i, n, k = 0, len = 0;
-	char *str;
+int j;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
+for (j = 0; src[i] != ' ' && i < str_len; i++, j++)
+dest[j] = src[i];
+return (i);
+}
+/**
+ * mallocmem - allocates memory for output array and sets NULL at string end
+ * @newstr: new string
+ * @str: input string
+ * @str_len: string length
+ * Return: void
+ */
+void mallocmem(char **newstr, char *str, int str_len)
+{
+int i = 0, j = 0, word_len = 1;
 
-	for (i = 0; i < ac; i++)
-	{
-		for (n = 0; av[i][n]; n++)
-			len++;
-	}
-	len += ac;
+while (i < str_len)
+{
+if (str[i] != ' ')
+{
+while (str[i] != ' ' && i < str_len)
+i++, word_len++;
+newstr[j] = malloc(sizeof(char) * word_len);
+newstr[j][word_len] = '\0';
+j++, word_len = 1;
+}
+i++;
+}
+}
+/**
+ * word_count - counts words in input string
+ * @str: input string
+ * @str_len: string length
+ * Return: 0 on failure, words on success
+ */
+int word_count(char *str, int str_len)
+{
+int i = 0, words = 0;
 
-	str = malloc(sizeof(char) * len + 1);
-	if (str == NULL)
-		return (NULL);
+while (i < str_len)
+{
+if (str[i] != ' ')
+{
+while (str[i] != ' ' && i < str_len)
+i++;
+words++;
+}
+i++;
+}
+if (words == 0)
+return (0);
+return (words);
+}
+/**
+ * strtow - splits a string into words
+ * @str: input string to split
+ * Return: pointer to new string
+ */
+char **strtow(char *str)
+{
+char **newstr;
+int i = 0, j = 0, str_len = 0, words;
 
-	for (i = 0; i < ac; i++)
-	{
-		for (n = 0; av[i][n]; n++)
-		{
-			str[k] = av[i][n];
-			k++;
-		}
-		if (str[k] == '\0')
-		{
-			str[k++] = '\n';
-		}
-	}
-	return (str);
+if (str == NULL || str[0] == '\0')
+return (NULL);
+while (*(str + str_len) != '\0')
+str_len++;
+words = word_count(str, str_len);
+if (!words)
+return (NULL);
+newstr = malloc((words + 1) * sizeof(char *));
+mallocmem(newstr, str, str_len);
+while (i < str_len)
+{
+if (str[i] != ' ')
+{
+i = strncat_mod(newstr[j], str, i, str_len);
+j++, i--;
+}
+i++;
+}
+newstr[words + 1] = NULL;
+return (newstr);
 }
