@@ -6,7 +6,7 @@
  * @size: size of an array
  * @cmp: pointer to fun
  *
- * Return:: -1 -> no match or -size 
+ * Return:-1 -> no match or -size
  * if match retuneb index of the element in the array
 */
 
