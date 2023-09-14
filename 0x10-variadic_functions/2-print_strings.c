@@ -1,11 +1,11 @@
-#include "var_func.h"
+#include "variadic_functions.h"
 /**
- * print_numbers - print number
+ * print_strings - print strings
  * @separator: string to be printed between numbers
  * @n: the number of integers passed to the function
  *
 */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list ptr;
 	int i = 0;

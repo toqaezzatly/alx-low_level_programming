@@ -1,4 +1,4 @@
-#include "var_func.h"
+#include "variadic_functions.h"
 /**
  * print_numbers - print number
  * @separator: string to be printed between numbers
@@ -8,7 +8,7 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ptr;
-	int i = 0;
+	unsigned int i = 0;
 
 	va_start(ptr, n);
 
