@@ -1,1 +1,1 @@
-variadic fn
+variadic func 
