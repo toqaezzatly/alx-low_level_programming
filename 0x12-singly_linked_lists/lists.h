@@ -7,8 +7,8 @@
 
 /**
  * struct list - node
- * @data: value to be stored
- * @len: string length
+ * @str: value to be stored
+ * @len_: string length
  * @next: pointer to next node
 */
 typedef struct list
