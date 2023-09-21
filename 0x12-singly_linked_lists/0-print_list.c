@@ -1,13 +1,13 @@
 #include "lists.h"
 /**
  * print_list - prints all the elements of a list_t list
- * @h: pointer to first node
+ * @head: pointer to first node
  *
  * Return: number of nodes
 */
 size_t print_list(const list_t *head)
 {
-	size_t count = 0;
+	unsigned long int count = 0;
 
 	while (head != NULL)
 	{
