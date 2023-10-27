@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 #include <ctype.h>
-
+/**
+ * main - adds two positive number
+ * @argc: number of arguments
+ * @argv: array of arguents
+ *
+ * Return: 0 (Success), or 1 (Success)
+ */
 int main(int argc, char *argv[])
 {
 int i, j, sum;
