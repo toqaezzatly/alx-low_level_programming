@@ -2,8 +2,7 @@
 #include "main.h"
 
 /*
- * printing alphabetX10 _putchar
-*
+ * print_alphabet_x10 - func
 */
 
 void  print_alphabet_x10(void)
