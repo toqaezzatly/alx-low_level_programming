@@ -1,11 +1,12 @@
-#include "main.h"
-/***
- * binary_to_uint - a fn to convert
- * a binary number to an unsigned int
- * @b: pointer to binary num
- * Return: unsigned int (converted)
-*/
-unsigned int binary_to_unit(const char *b)
+#include "holberton.h"
+
+/**
+ * binary_to_uint - A finction that converts binary number
+ * to an unsigned integer
+ * @b: A pointer to binary string
+ * Return: unsigned integer converted number
+ */
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int base = 1, result = 0, len = 0;
 
@@ -21,7 +22,7 @@ unsigned int binary_to_unit(const char *b)
 			return (0);
 
 		if (b[len - 1] == '1')
-			result = base;
+			result += base;
 		base *= 2;
 		len--;
 	}
